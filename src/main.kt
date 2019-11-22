@@ -1,5 +1,8 @@
 fun main(){
-    println(med(listOf(1.0, 2.0, 3.0, 4.0, 7.0)))
+    var str = readLine()!!.split(" ")
+    var str1 = mutableListOf<Double>()
+    for (i in str) {str1.add(i.toDouble())}
+    println(med(str1).toString().replace(",","").replace('[', ' ').replace(']',' ').trim())
 }
 
 fun med(si:List<Double>):List<Double> {
@@ -16,7 +19,6 @@ fun med(si:List<Double>):List<Double> {
     }
     else {
         so[1] = si[si.size/2]
-        println(so[1])
     }
     return so
 }
